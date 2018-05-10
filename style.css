@@ -1,4 +1,6 @@
-/*
+@charset "UTF-8";
+
+/*!
 Theme Name:     Frank
 Theme URI:      http://somerandomdude.com/work/frank
 Description:    The next step of the Franklin Street theme.
@@ -9,7 +11,13 @@ License:				GPL 3.0
 License URI:		http://www.gnu.org/copyleft/gpl.html
 Tags: 					brown, red, white, two-columns, fixed-width, sticky-post, custom-menu
 */
-.metadata, .metadata li, .wp-caption img, .menu-item, .sub-menu, #comments .comment {
+
+.metadata,
+.metadata li,
+.wp-caption img,
+.menu-item,
+.sub-menu,
+#comments .comment {
   margin: 0;
   padding: 0;
 }
@@ -20,11 +28,15 @@ Tags: 					brown, red, white, two-columns, fixed-width, sticky-post, custom-menu
   color: transparent;
 }
 
-.post-content img, #prev-post .arrow {
-  box-shadow: 0px 0px 8px rgba(18, 7, 6, 0.3);
+.post-content img,
+#prev-post .arrow {
+  -webkit-box-shadow: 0px 0px 8px rgba(18, 7, 6, 0.3);
+          box-shadow: 0px 0px 8px rgba(18, 7, 6, 0.3);
 }
 
-blockquote, pre, .bypostauthor {
+blockquote,
+pre,
+.bypostauthor {
   border: 2px solid #050000;
   border-width: 2px 0;
   padding: 15px 0;
@@ -41,13 +53,16 @@ blockquote, pre, .bypostauthor {
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
+
 article,
 aside,
 details,
@@ -67,6 +82,7 @@ main {
 /*
  * Corrects `inline-block` display not defined in IE 8/9.
  */
+
 audio,
 canvas,
 video {
@@ -77,6 +93,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -85,6 +102,7 @@ audio:not([controls]) {
 /*
  * Addresses styling for `hidden` attribute not present in IE 8/9.
  */
+
 [hidden] {
   display: none;
 }
@@ -92,11 +110,13 @@ audio:not([controls]) {
 /* ==========================================================================
    Base
    ========================================================================== */
+
 /*
  * 1. Sets default font family to sans-serif.
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
 html {
   font-family: sans-serif;
   /* 1 */
@@ -109,6 +129,7 @@ html {
 /*
  * Removes default margin.
  */
+
 body {
   margin: 0;
 }
@@ -116,9 +137,11 @@ body {
 /* ==========================================================================
    Links
    ========================================================================== */
+
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
+
 a:focus {
   outline: thin dotted;
 }
@@ -126,6 +149,7 @@ a:focus {
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  */
+
 a:active,
 a:hover {
   outline: 0;
@@ -134,10 +158,12 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
+
 /*
  * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
  * Safari 5, and Chrome.
  */
+
 h1 {
   font-size: 2em;
 }
@@ -145,6 +171,7 @@ h1 {
 /*
  * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
  */
+
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -152,6 +179,7 @@ abbr[title] {
 /*
  * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
+
 b,
 strong {
   font-weight: bold;
@@ -160,6 +188,7 @@ strong {
 /*
  * Addresses styling not present in Safari 5 and Chrome.
  */
+
 dfn {
   font-style: italic;
 }
@@ -167,6 +196,7 @@ dfn {
 /*
  * Addresses styling not present in IE 8/9.
  */
+
 mark {
   background: #ff0;
   color: #000;
@@ -175,6 +205,7 @@ mark {
 /*
  * Corrects font family set oddly in Safari 5 and Chrome.
  */
+
 code,
 kbd,
 pre,
@@ -186,6 +217,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
+
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -195,6 +227,7 @@ pre {
 /*
  * Sets consistent quote types.
  */
+
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -202,6 +235,7 @@ q {
 /*
  * Addresses inconsistent and variable font size in all browsers.
  */
+
 small {
   font-size: 80%;
 }
@@ -209,6 +243,7 @@ small {
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  */
+
 sub,
 sup {
   font-size: 75%;
@@ -228,9 +263,11 @@ sub {
 /* ==========================================================================
    Embedded content
    ========================================================================== */
+
 /*
  * Removes border when inside `a` element in IE 8/9.
  */
+
 img {
   border: 0;
 }
@@ -238,6 +275,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE 9.
  */
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -245,9 +283,11 @@ svg:not(:root) {
 /* ==========================================================================
    Figures
    ========================================================================== */
+
 /*
  * Addresses margin not present in IE 8/9 and Safari 5.
  */
+
 figure {
   margin: 0;
 }
@@ -255,9 +295,11 @@ figure {
 /* ==========================================================================
    Forms
    ========================================================================== */
+
 /*
  * Define consistent border, margin, and padding.
  */
+
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -268,6 +310,7 @@ fieldset {
  * 1. Corrects color not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
+
 legend {
   border: 0;
   /* 1 */
@@ -280,6 +323,7 @@ legend {
  * 2. Corrects font size not being inherited in all browsers.
  * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
  */
+
 button,
 input,
 select,
@@ -296,6 +340,7 @@ textarea {
  * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+
 button,
 input {
   line-height: normal;
@@ -308,6 +353,7 @@ input {
  * 3. Improves usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -321,6 +367,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
+
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -329,6 +376,7 @@ input[disabled] {
 /*
  * 2. Removes excess padding in IE 8/9.
  */
+
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
@@ -340,10 +388,10 @@ input[type="radio"] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
+
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
@@ -353,6 +401,7 @@ input[type="search"] {
  * Removes inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -361,6 +410,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in Firefox 4+.
  */
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -371,6 +421,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE 8/9.
  * 2. Improves readability and alignment in all browsers.
  */
+
 textarea {
   overflow: auto;
   /* 1 */
@@ -381,15 +432,18 @@ textarea {
 /* ==========================================================================
    Tables
    ========================================================================== */
+
 /*
  * Remove most spacing between table cells.
  */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* Artfully Masterminded by ZURB */
+
 /* --------------------------------------------------
 	:: Grid
 	
@@ -397,6 +451,7 @@ table {
 	lets Foundation work much of its magic.
 	
 	-------------------------------------------------- */
+
 .container {
   padding: 0 20px;
 }
@@ -409,18 +464,51 @@ table {
 }
 
 /* To fix the grid into a certain size, set max-width to width */
+
 .row .row {
   min-width: 0;
 }
 
-.column, #content-primary, .post.leftaside .post-content, .type-page.leftaside .post-content, .post.leftaside .post-info, .type-page.leftaside .post-info, .post-group.twoup .post, .post-group.threeup .post, .post-group.fourup .post, #sidebar, #comment-form-logged-in-as, #comment-form-info, #comment-form-content, .comment-content, .comment-info, #comment-form-allowed-tags, .columns {
+.column,
+#content-primary,
+.post.leftaside .post-content,
+.type-page.leftaside .post-content,
+.post.leftaside .post-info,
+.type-page.leftaside .post-info,
+.post-group.twoup .post,
+.post-group.threeup .post,
+.post-group.fourup .post,
+#sidebar,
+#comment-form-logged-in-as,
+#comment-form-info,
+#comment-form-content,
+.comment-content,
+.comment-info,
+#comment-form-allowed-tags,
+.columns {
   margin-left: 4.4%;
   float: left;
   min-height: 1px;
   position: relative;
 }
 
-.column:first-child, #content-primary:first-child, .post.leftaside .post-content:first-child, .type-page.leftaside .post-content:first-child, .post.leftaside .post-info:first-child, .type-page.leftaside .post-info:first-child, .post-group.twoup .post:first-child, .post-group.threeup .post:first-child, .post-group.fourup .post:first-child, #sidebar:first-child, #comment-form-logged-in-as:first-child, #comment-form-info:first-child, #comment-form-content:first-child, .comment-content:first-child, .comment-info:first-child, #comment-form-allowed-tags:first-child, .columns:first-child {
+.column:first-child,
+#content-primary:first-child,
+.post.leftaside .post-content:first-child,
+.type-page.leftaside .post-content:first-child,
+.post.leftaside .post-info:first-child,
+.type-page.leftaside .post-info:first-child,
+.post-group.twoup .post:first-child,
+.post-group.threeup .post:first-child,
+.post-group.fourup .post:first-child,
+#sidebar:first-child,
+#comment-form-logged-in-as:first-child,
+#comment-form-info:first-child,
+#comment-form-content:first-child,
+.comment-content:first-child,
+.comment-info:first-child,
+#comment-form-allowed-tags:first-child,
+.columns:first-child {
   margin-left: 0;
 }
 
@@ -566,11 +654,16 @@ table {
 }
 
 /* Source Ordering */
+
 .push-two {
   left: 17.4%;
 }
 
-.push-three, .post.leftaside .post-content, .type-page.leftaside .post-content, .comment-content, #comment-form-allowed-tags {
+.push-three,
+.post.leftaside .post-content,
+.type-page.leftaside .post-content,
+.comment-content,
+#comment-form-allowed-tags {
   left: 26.1%;
 }
 
@@ -630,7 +723,10 @@ table {
   right: 69.6%;
 }
 
-.pull-nine, .post.leftaside .post-info, .type-page.leftaside .post-info, .comment-info {
+.pull-nine,
+.post.leftaside .post-info,
+.type-page.leftaside .post-info,
+.comment-info {
   right: 78.3%;
 }
 
@@ -638,22 +734,49 @@ table {
   right: 87%;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
 
 /* Nicolas Gallagher's micro clearfix */
-.row:before, .row:after, .clearfix:before, .menu:before, .post.leftaside .post-content:before, .type-page.leftaside .post-content:before, .single .post-content p:before, .comment-content:before, .clearfix:after, .menu:after, .post.leftaside .post-content:after, .type-page.leftaside .post-content:after, .single .post-content p:after, .comment-content:after {
+
+.row:before,
+.row:after,
+.clearfix:before,
+.menu:before,
+.post.leftaside .post-content:before,
+.type-page.leftaside .post-content:before,
+.single .post-content p:before,
+.comment-content:before,
+.clearfix:after,
+.menu:after,
+.post.leftaside .post-content:after,
+.type-page.leftaside .post-content:after,
+.single .post-content p:after,
+.comment-content:after {
   content: "";
   display: table;
 }
 
-.row:after, .clearfix:after, .menu:after, .post.leftaside .post-content:after, .type-page.leftaside .post-content:after, .single .post-content p:after, .comment-content:after {
+.row:after,
+.clearfix:after,
+.menu:after,
+.post.leftaside .post-content:after,
+.type-page.leftaside .post-content:after,
+.single .post-content p:after,
+.comment-content:after {
   clear: both;
 }
 
-.row, .clearfix, .menu, .post.leftaside .post-content, .type-page.leftaside .post-content, .single .post-content p, .comment-content {
+.row,
+.clearfix,
+.menu,
+.post.leftaside .post-content,
+.type-page.leftaside .post-content,
+.single .post-content p,
+.comment-content {
   zoom: 1;
 }
 
@@ -670,6 +793,7 @@ img, video {
 	lines below to support arbitrary height, but know
 	that IE7/8 do not support :nth-child.
 	-------------------------------------------------- */
+
 .block-grid {
   display: block;
   overflow: hidden;
@@ -691,6 +815,7 @@ img, video {
 }
 
 /* 	.block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
+
 .block-grid.three-up {
   margin-left: -2%;
 }
@@ -701,6 +826,7 @@ img, video {
 }
 
 /* 	.block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
+
 .block-grid.four-up {
   margin-left: -2%;
 }
@@ -711,6 +837,7 @@ img, video {
 }
 
 /* 	.block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
+
 .block-grid.five-up {
   margin-left: -1.5%;
 }
@@ -721,12 +848,17 @@ img, video {
 }
 
 /* 	.block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
+
 /* --------------------------------------------------
 	:: Grid
 	-------------------------------------------------- */
+
 /* Mobile */
+
 @media only screen and (max-width: 767px) {
-  body, .container, .row {
+  body,
+  .container,
+  .row {
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
@@ -744,18 +876,73 @@ img, video {
     width: 100%;
   }
 
-  .row .row .column, .row .row #content-primary, .row .row .post.leftaside .post-content, .post.leftaside .row .row .post-content, .row .row .type-page.leftaside .post-content, .type-page.leftaside .row .row .post-content, .row .row .post.leftaside .post-info, .post.leftaside .row .row .post-info, .row .row .type-page.leftaside .post-info, .type-page.leftaside .row .row .post-info, .row .row .post-group.twoup .post, .post-group.twoup .row .row .post, .row .row .post-group.threeup .post, .post-group.threeup .row .row .post, .row .row .post-group.fourup .post, .post-group.fourup .row .row .post, .row .row #sidebar, .row .row #comment-form-logged-in-as, .row .row #comment-form-info, .row .row #comment-form-content, .row .row .comment-content, .row .row .comment-info, .row .row #comment-form-allowed-tags, .row .row .columns {
+  .row .row .column,
+  .row .row #content-primary,
+  .row .row .post.leftaside .post-content,
+  .post.leftaside .row .row .post-content,
+  .row .row .type-page.leftaside .post-content,
+  .type-page.leftaside .row .row .post-content,
+  .row .row .post.leftaside .post-info,
+  .post.leftaside .row .row .post-info,
+  .row .row .type-page.leftaside .post-info,
+  .type-page.leftaside .row .row .post-info,
+  .row .row .post-group.twoup .post,
+  .post-group.twoup .row .row .post,
+  .row .row .post-group.threeup .post,
+  .post-group.threeup .row .row .post,
+  .row .row .post-group.fourup .post,
+  .post-group.fourup .row .row .post,
+  .row .row #sidebar,
+  .row .row #comment-form-logged-in-as,
+  .row .row #comment-form-info,
+  .row .row #comment-form-content,
+  .row .row .comment-content,
+  .row .row .comment-info,
+  .row .row #comment-form-allowed-tags,
+  .row .row .columns {
     padding: 0;
   }
 
-  .column, #content-primary, .post.leftaside .post-content, .type-page.leftaside .post-content, .post.leftaside .post-info, .type-page.leftaside .post-info, .post-group.twoup .post, .post-group.threeup .post, .post-group.fourup .post, #sidebar, #comment-form-logged-in-as, #comment-form-info, #comment-form-content, .comment-content, .comment-info, #comment-form-allowed-tags, .columns {
+  .column,
+  #content-primary,
+  .post.leftaside .post-content,
+  .type-page.leftaside .post-content,
+  .post.leftaside .post-info,
+  .type-page.leftaside .post-info,
+  .post-group.twoup .post,
+  .post-group.threeup .post,
+  .post-group.fourup .post,
+  #sidebar,
+  #comment-form-logged-in-as,
+  #comment-form-info,
+  #comment-form-content,
+  .comment-content,
+  .comment-info,
+  #comment-form-allowed-tags,
+  .columns {
     width: auto !important;
     float: none;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .column:last-child, #content-primary:last-child, .post.leftaside .post-content:last-child, .type-page.leftaside .post-content:last-child, .post.leftaside .post-info:last-child, .type-page.leftaside .post-info:last-child, .post-group.twoup .post:last-child, .post-group.threeup .post:last-child, .post-group.fourup .post:last-child, #sidebar:last-child, #comment-form-logged-in-as:last-child, #comment-form-info:last-child, #comment-form-content:last-child, .comment-content:last-child, .comment-info:last-child, #comment-form-allowed-tags:last-child, .columns:last-child {
+  .column:last-child,
+  #content-primary:last-child,
+  .post.leftaside .post-content:last-child,
+  .type-page.leftaside .post-content:last-child,
+  .post.leftaside .post-info:last-child,
+  .type-page.leftaside .post-info:last-child,
+  .post-group.twoup .post:last-child,
+  .post-group.threeup .post:last-child,
+  .post-group.fourup .post:last-child,
+  #sidebar:last-child,
+  #comment-form-logged-in-as:last-child,
+  #comment-form-info:last-child,
+  #comment-form-content:last-child,
+  .comment-content:last-child,
+  .comment-info:last-child,
+  #comment-form-allowed-tags:last-child,
+  .columns:last-child {
     margin-right: 0;
     float: none;
   }
@@ -764,7 +951,8 @@ img, video {
     float: none;
   }
 
-  [class*="column"]:before, [class*="column"]:after {
+  [class*="column"]:before,
+  [class*="column"]:after {
     content: "";
     display: table;
   }
@@ -773,21 +961,57 @@ img, video {
     clear: both;
   }
 
-  .offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .centered {
+  .offset-by-one,
+  .offset-by-two,
+  .offset-by-three,
+  .offset-by-four,
+  .offset-by-five,
+  .offset-by-six,
+  .offset-by-seven,
+  .offset-by-eight,
+  .offset-by-nine,
+  .offset-by-ten,
+  .offset-by-eleven,
+  .centered {
     margin-left: 0 !important;
   }
 
-  .push-two, .push-three, .post.leftaside .post-content, .type-page.leftaside .post-content, .comment-content, #comment-form-allowed-tags, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten {
+  .push-two,
+  .push-three,
+  .post.leftaside .post-content,
+  .type-page.leftaside .post-content,
+  .comment-content,
+  #comment-form-allowed-tags,
+  .push-four,
+  .push-five,
+  .push-six,
+  .push-seven,
+  .push-eight,
+  .push-nine,
+  .push-ten {
     left: auto;
   }
 
-  .pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .post.leftaside .post-info, .type-page.leftaside .post-info, .comment-info, .pull-ten {
+  .pull-two,
+  .pull-three,
+  .pull-four,
+  .pull-five,
+  .pull-six,
+  .pull-seven,
+  .pull-eight,
+  .pull-nine,
+  .post.leftaside .post-info,
+  .type-page.leftaside .post-info,
+  .comment-info,
+  .pull-ten {
     right: auto;
   }
 }
+
 /* --------------------------------------------------
 	:: Block Grids
 	-------------------------------------------------- */
+
 @media only screen and (max-width: 767px) {
   .block-grid.mobile {
     margin-left: 0;
@@ -799,6 +1023,7 @@ img, video {
     margin-left: 0;
   }
 }
+
 body {
   font: 62.5%/1.6 Georgia, serif;
   background: #fffefe;
@@ -808,49 +1033,93 @@ body {
 }
 
 /*Images*/
+
 img.noshadow {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 /*Anchor tags*/
+
 a {
   color: #ea0000;
   text-decoration: none;
 }
+
 a:hover {
   color: #ff1e00;
 }
 
 /* Titles */
-.title, h1, h2, h3, h4, h5, h6, .widget-title {
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.widget-title {
   font: 400 17px/1.3 Sans-Serif;
 }
-.title a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .widget-title a {
+
+.title a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.widget-title a {
   color: #5d504f;
 }
-.title a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .widget-title a:hover {
+
+.title a:hover,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.widget-title a:hover {
   color: #3d302f;
 }
 
-.title.large, h1.large, h2.large, h3.large, h4.large, h5.large, h6.large {
+.title.large,
+h1.large,
+h2.large,
+h3.large,
+h4.large,
+h5.large,
+h6.large {
   font-size: 20px;
 }
 
-.title.small, h1.small, h2.small, h3.small, h4.small, h5.small, h6.small {
+.title.small,
+h1.small,
+h2.small,
+h3.small,
+h4.small,
+h5.small,
+h6.small {
   font: 700 13px/1.25 Sans-Serif;
 }
 
 /*Tables*/
+
 table {
   font-size: 13px;
   margin: 15px 0;
 }
 
-table, td, th {
+table,
+td,
+th {
   vertical-align: middle;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   font-weight: 400;
   padding: 0 5px;
@@ -862,7 +1131,9 @@ th {
 }
 
 /*Ordered & Unordered lists*/
-ul, ol {
+
+ul,
+ol {
   padding: 0;
   margin: 15px 0 15px 40px;
 }
@@ -872,13 +1143,15 @@ ul {
 }
 
 /*Definition lists*/
+
 dl {
   margin: 20px 0;
   padding: 0;
   font-family: Georgia, serif;
 }
 
-dt, dd {
+dt,
+dd {
   font-size: 11px;
 }
 
@@ -886,6 +1159,7 @@ dt {
   font-weight: 700;
   margin-top: 15px;
 }
+
 dt:first-child {
   margin: 0;
 }
@@ -895,6 +1169,7 @@ dd {
 }
 
 /*Generic Classes*/
+
 .more-link {
   font-style: italic;
 }
@@ -907,7 +1182,8 @@ dd {
   overflow: hidden;
 }
 
-.truncate, .widget-title {
+.truncate,
+.widget-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -915,20 +1191,31 @@ dd {
 }
 
 /*Pagination links*/
+
 .pagination {
   font-size: font-size-small;
 }
+
 .pagination a {
   margin-right: 40px;
   width: 110px;
 }
+
 .pagination.small {
   font: 13px Sans-Serif;
 }
-.pagination.small .title, .pagination.small h1, .pagination.small h2, .pagination.small h3, .pagination.small h4, .pagination.small h5, .pagination.small h6 {
+
+.pagination.small .title,
+.pagination.small h1,
+.pagination.small h2,
+.pagination.small h3,
+.pagination.small h4,
+.pagination.small h5,
+.pagination.small h6 {
   font-weight: 700;
   margin-right: 15px;
 }
+
 .pagination.small a {
   margin: 0;
   border: 1px #f0eceb solid;
@@ -947,10 +1234,12 @@ dd {
 }
 
 #content.page .post img {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 /*Search - not implemented*/
+
 #searchform input {
   width: 100%;
 }
@@ -958,75 +1247,105 @@ dd {
 #search {
   float: right;
 }
+
 #search #search_button {
   display: none;
 }
+
 #search #search_form input {
   font-size: 11px;
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
   #content.single .post .flush-left {
     margin-left: 0% !important;
   }
+
   #content.single .post img.flush-left {
     max-width: 100% !important;
   }
 }
+
 .font-size-xx-large {
   font-size: 28px;
 }
 
-.font-size-x-large, h1 {
+.font-size-x-large,
+h1 {
   font-size: 24px;
 }
 
-.font-size-large, h2 {
+.font-size-large,
+h2 {
   font-size: 20px;
 }
 
-.font-size-medium, h3 {
+.font-size-medium,
+h3 {
   font-size: 17px;
 }
 
-.font-size-small, h4, p, small {
+.font-size-small,
+h4,
+p,
+small {
   font-size: 13px;
 }
 
-.font-size-x-small, h5 {
+.font-size-x-small,
+h5 {
   font-size: 11px;
 }
 
-.font-size-xx-small, h6 {
+.font-size-xx-small,
+h6 {
   font-size: 10px;
 }
 
 /*Headers*/
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding-top: 0px;
   margin-bottom: 15px;
 }
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
   margin-top: 0;
 }
 
 /*Paragraph*/
+
 p {
   margin: 15px 0;
 }
+
 p:first-child {
   margin-top: 0;
 }
+
 p:last-child {
   margin-bottom: 0;
 }
 
 /*Blockquote*/
+
 blockquote {
   color: #3d302f;
   margin: 30px 0 30px 40px;
 }
+
 blockquote p {
   font-size: inherit;
   line-height: inherit;
@@ -1040,16 +1359,19 @@ blockquote > p:last-child::after {
   content: close-quote;
 }
 
-blockquote, q {
-  quotes: "“" "”";
+blockquote,
+q {
+  quotes: "\201C" "\201D";
 }
 
-cite, blockquote[cite]:after, cite {
+cite,
+blockquote[cite]:after,
+cite {
   font: 13px Sans-Serif;
 }
 
 blockquote[cite]:after {
-  content: "—" attr(cite);
+  content: "\2014" attr(cite);
   display: block;
   color: #050000;
   margin-top: 15px;
@@ -1060,12 +1382,15 @@ cite {
   margin-top: -1em;
   margin-bottom: 2em;
 }
+
 cite:before {
-  content: "—";
+  content: "\2014";
 }
 
 /*Pre & Code*/
-pre, code {
+
+pre,
+code {
   white-space: pre;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -1079,8 +1404,10 @@ pre {
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
   /*Typography*/
+
   h1 {
     font-size: 24px;
   }
@@ -1105,8 +1432,11 @@ pre {
     font-size: 10px;
   }
 }
+
 /*Buttons*/
-.button, input[type=submit] {
+
+.button,
+input[type=submit] {
   display: inline-block;
   background: #f0eceb;
   color: #5d504f;
@@ -1116,7 +1446,9 @@ pre {
   text-align: center;
   border: 1px solid rgba(18, 7, 6, 0.2);
 }
-.button:hover, input[type=submit]:hover {
+
+.button:hover,
+input[type=submit]:hover {
   background: #998482;
   color: #fffefe;
   border: 1px solid rgba(18, 7, 6, 0.5);
@@ -1126,6 +1458,7 @@ pre {
   background: #ea0000;
   color: #fffefe;
 }
+
 .button.alt:hover {
   background: #ff1e00;
   color: #fffefe;
@@ -1137,20 +1470,27 @@ pre {
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
-  button, .button, input[type=submit] {
+  button,
+  .button,
+  input[type=submit] {
     display: block;
     width: 100% !important;
     margin: 15px 0;
   }
 }
+
 /*Metadata content*/
+
 .metadata {
   font: 11px Sans-Serif;
 }
+
 .metadata a {
   color: #5d504f;
 }
+
 .metadata a:hover {
   color: #050000;
 }
@@ -1158,6 +1498,7 @@ pre {
 .metadata {
   list-style: none;
 }
+
 .metadata .date {
   font-weight: 700;
 }
@@ -1166,9 +1507,11 @@ pre {
   margin-top: 15px;
   display: inline-block;
 }
+
 .metadata.horizontal li {
   float: left;
 }
+
 .metadata.horizontal li:not(:last-of-type) {
   margin-right: 15px;
 }
@@ -1176,34 +1519,44 @@ pre {
 .metadata.vertical {
   margin-top: 5px;
 }
+
 .metadata.vertical li {
   text-align: right;
   margin-bottom: 7px;
 }
+
 .metadata.vertical .date {
   margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 767px) {
   /*Metadata content*/
+
   ul.metadata.vertical {
     margin-top: 30px;
     display: inline-block;
   }
+
   ul.metadata.vertical li {
     float: left;
     margin-right: 15px;
     text-align: left;
   }
+
   ul.metadata.vertical li:last-child {
     margin-right: 0;
   }
+
   ul.metadata.vertical li:first-child {
     margin-left: 0;
   }
 }
+
 /*Wordpress Classes*/
-.alignleft, .alignright, .aligncenter {
+
+.alignleft,
+.alignright,
+.aligncenter {
   margin: 10px 0 15px 0;
 }
 
@@ -1227,6 +1580,7 @@ pre {
   text-align: center;
   margin-top: 10px 0 15px 0;
 }
+
 .wp-caption img {
   border: 0 none;
 }
@@ -1254,6 +1608,7 @@ pre {
   font-size: 11px;
   margin-bottom: 15px;
 }
+
 .widget p {
   font-size: 11px;
 }
@@ -1262,16 +1617,22 @@ pre {
   font-size: 13px;
 }
 
-.widget.six.columns, .widget.three.columns, .widget.four.columns {
+.widget.six.columns,
+.widget.three.columns,
+.widget.four.columns {
   float: left !important;
 }
 
-.widget.six.columns:nth-child(2n+1), .widget.three.columns:nth-child(4n+1), .widget.four.columns:nth-child(3n+1) {
+.widget.six.columns:nth-child(2n+1),
+.widget.three.columns:nth-child(4n+1),
+.widget.four.columns:nth-child(3n+1) {
   margin-left: 0;
   clear: left;
 }
 
-.widget.six.columns:nth-child(2n), .widget.three.columns:nth-child(4n), .widget.four.columns:nth-child(3n) {
+.widget.six.columns:nth-child(2n),
+.widget.three.columns:nth-child(4n),
+.widget.four.columns:nth-child(3n) {
   margin-right: 0;
   float: right;
 }
@@ -1282,38 +1643,37 @@ textarea {
   font: 13px Sans-Serif;
   color: #5d504f;
   padding: 3px 4px;
-  box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.2);
+  -webkit-box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.2);
+          box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.2);
   border-radius: 2px;
 }
 
 input[type=text]:focus,
 textarea:focus {
   border: 1px solid #050000;
-  box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.1);
+  -webkit-box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.1);
+          box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.1);
 }
 
 #comment-form-content textarea {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-transition: height 0.5s cubic-bezier(0.02, 0, 0.18, 1);
   -moz-transition: height 0.5s cubic-bezier(0.02, 0, 0.18, 1);
 }
 
-button, .button, input[type=submit] {
+button,
+.button,
+input[type=submit] {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-transition: background-color 0.5s cubic-bezier(0.02, 0, 0.18, 1);
   -moz-transition: background-color 0.5s cubic-bezier(0.02, 0, 0.18, 1);
 }
 
-#content.single .previous .arrow, #content.single .previous a {
+#content.single .previous .arrow,
+#content.single .previous a {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-transition: all 0.75s cubic-bezier(0.02, 0, 0.18, 1);
   -moz-transition: all 0.75s cubic-bezier(0.02, 0, 0.18, 1);
@@ -1338,7 +1698,8 @@ button, .button, input[type=submit] {
   border-bottom: 2px solid #f0eceb;
 }
 
-.menu, .sub-menu {
+.menu,
+.sub-menu {
   list-style: none;
 }
 
@@ -1366,6 +1727,7 @@ button, .button, input[type=submit] {
   margin-right: 10px;
   float: left;
 }
+
 .menu > .menu-item > a {
   padding: 15px 10px;
 }
@@ -1373,12 +1735,14 @@ button, .button, input[type=submit] {
 .menu-item {
   position: relative;
 }
+
 .menu-item a {
   padding: 7px 30px 7px 10px;
   display: block;
   color: #050000;
   font: 700 11px Sans-Serif;
 }
+
 .menu-item a:hover {
   color: #5d504f;
 }
@@ -1390,13 +1754,16 @@ button, .button, input[type=submit] {
 .sub-menu .menu-item:first-child {
   margin-top: 10px;
 }
+
 .sub-menu > .menu-item a {
   padding-left: 15px;
 }
+
 .sub-menu a {
   font-weight: 400;
   white-space: nowrap;
 }
+
 .sub-menu a:hover {
   background: #e5dedc;
   border: 0;
@@ -1411,6 +1778,7 @@ button, .button, input[type=submit] {
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
+
 #sub-header p {
   margin-top: 0;
 }
@@ -1421,10 +1789,12 @@ button, .button, input[type=submit] {
     margin: 0;
     border-bottom: 1px solid #f0eceb;
   }
+
   #site-nav li a {
     font-size: 13px;
     padding: 15px 0;
   }
+
   #site-nav li:last-child {
     border-bottom: 0;
   }
@@ -1433,6 +1803,7 @@ button, .button, input[type=submit] {
     display: none;
   }
 }
+
 .posts {
   margin: 60px auto;
 }
@@ -1448,54 +1819,77 @@ button, .button, input[type=submit] {
 .post-content {
   font: 17px/1.6 Georgia, serif;
 }
-.post-content p, .post-content li, .post-content dt, .post-content dd, .post-content blockquote {
+
+.post-content p,
+.post-content li,
+.post-content dt,
+.post-content dd,
+.post-content blockquote {
   font-size: 17px;
 }
+
 .post-content li {
   margin: 10px 0;
 }
-.post-content code, .post-content small {
+
+.post-content code,
+.post-content small {
   font-size: 13px;
 }
+
 .post-content img {
   max-width: 100%;
 }
 
-.post, .type-page {
+.post,
+.type-page {
   margin: 60px 0;
 }
-.post:first-child, .type-page:first-child {
+
+.post:first-child,
+.type-page:first-child {
   margin-top: 0;
 }
-.post:last-child, .type-page:last-child {
+
+.post:last-child,
+.type-page:last-child {
   margin-bottom: 0;
 }
-.post.leftaside .post-content, .type-page.leftaside .post-content {
+
+.post.leftaside .post-content,
+.type-page.leftaside .post-content {
   width: 73.9%;
 }
-.post.leftaside .post-info, .type-page.leftaside .post-info {
+
+.post.leftaside .post-info,
+.type-page.leftaside .post-info {
   width: 21.679%;
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
   #content.home .post-group.oneup.large .post-content p {
     font-size: 24px;
   }
 }
+
 .post-group-header {
   margin-bottom: 30px;
   padding-bottom: 5px;
   border-bottom: 1px #f0eceb solid;
 }
+
 .post-group-header .label {
   font-weight: 700;
 }
+
 .post-group-header .caption {
   font-style: italic;
   color: #5d504f;
   margin: 0 10px;
 }
+
 .post-group-header .more {
   font-family: Georgia, serif;
 }
@@ -1504,12 +1898,15 @@ button, .button, input[type=submit] {
   margin-top: 0;
   margin-bottom: 60px;
 }
+
 .post-group ~ .post-group {
   margin: 60px auto;
 }
+
 .post-group .read-more {
   margin-top: 15px;
 }
+
 .post-group .read-more .more {
   font-size: 11px;
 }
@@ -1517,23 +1914,35 @@ button, .button, input[type=submit] {
 .post-group.oneup.large section {
   margin: 0 0 15px 0;
 }
+
 .post-group.oneup.large section p {
   font-style: italic;
   font-size: 38px;
 }
 
-.post-group.twoup .post, .post-group.threeup .post, .post-group.fourup .post {
+.post-group.twoup .post,
+.post-group.threeup .post,
+.post-group.fourup .post {
   margin-top: 15px;
   float: left !important;
 }
-.post-group.twoup header h1, .post-group.threeup header h1, .post-group.fourup header h1 {
+
+.post-group.twoup header h1,
+.post-group.threeup header h1,
+.post-group.fourup header h1 {
   font-size: 13px;
   font-weight: 700;
 }
-.post-group.twoup section p, .post-group.threeup section p, .post-group.fourup section p {
+
+.post-group.twoup section p,
+.post-group.threeup section p,
+.post-group.fourup section p {
   font-size: 13px;
 }
-.post-group.twoup .metadata li, .post-group.threeup .metadata li, .post-group.fourup .metadata li {
+
+.post-group.twoup .metadata li,
+.post-group.threeup .metadata li,
+.post-group.fourup .metadata li {
   font-size: 11px;
 }
 
@@ -1549,31 +1958,61 @@ button, .button, input[type=submit] {
   width: 21.679%;
 }
 
-.post-group.threeup h2, .post-group.threeup h3, .post-group.fourup h2, .post-group.fourup h3 {
+.post-group.threeup h2,
+.post-group.threeup h3,
+.post-group.fourup h2,
+.post-group.fourup h3 {
   font-size: 13px;
 }
-.post-group.threeup h4, .post-group.threeup h5, .post-group.threeup h6, .post-group.fourup h4, .post-group.fourup h5, .post-group.fourup h6 {
+
+.post-group.threeup h4,
+.post-group.threeup h5,
+.post-group.threeup h6,
+.post-group.fourup h4,
+.post-group.fourup h5,
+.post-group.fourup h6 {
   font-size: 11px;
 }
-.post-group.threeup h2, .post-group.threeup h4, .post-group.fourup h2, .post-group.fourup h4 {
+
+.post-group.threeup h2,
+.post-group.threeup h4,
+.post-group.fourup h2,
+.post-group.fourup h4 {
   font-weight: 700;
 }
-.post-group.threeup li, .post-group.threeup dl, .post-group.threeup code, .post-group.threeup blockquote, .post-group.threeup blockquote p, .post-group.fourup li, .post-group.fourup dl, .post-group.fourup code, .post-group.fourup blockquote, .post-group.fourup blockquote p {
+
+.post-group.threeup li,
+.post-group.threeup dl,
+.post-group.threeup code,
+.post-group.threeup blockquote,
+.post-group.threeup blockquote p,
+.post-group.fourup li,
+.post-group.fourup dl,
+.post-group.fourup code,
+.post-group.fourup blockquote,
+.post-group.fourup blockquote p {
   font-size: 13px;
 }
 
 /* TODO: Try this pattern out :not(:last-child) */
-.post-group.twoup .post:nth-child(2n+1), .post-group.threeup .post:nth-child(3n+1), .post-group.fourup .post:nth-child(4n+1) {
+
+.post-group.twoup .post:nth-child(2n+1),
+.post-group.threeup .post:nth-child(3n+1),
+.post-group.fourup .post:nth-child(4n+1) {
   margin-left: 0;
   clear: left;
 }
 
-.post-group.twoup .post:nth-child(2n), .post-group.threeup .post:nth-child(3n), .post-group.fourup .post:nth-child(4n) {
+.post-group.twoup .post:nth-child(2n),
+.post-group.threeup .post:nth-child(3n),
+.post-group.fourup .post:nth-child(4n) {
   margin-right: 0;
   float: right;
 }
 
-.post-group.twoup .post:nth-child(n+3), .post-group.threeup .post:nth-child(n+4), .post-group.fourup .post:nth-child(n+5) {
+.post-group.twoup .post:nth-child(n+3),
+.post-group.threeup .post:nth-child(n+4),
+.post-group.fourup .post:nth-child(n+5) {
   margin-bottom: 0;
   margin-top: 45px;
 }
@@ -1582,84 +2021,108 @@ button, .button, input[type=submit] {
   margin: 60px 0 30px;
   font: italic 1em Georgia, serif;
 }
+
 #prev-post a {
   font-size: 13px;
   display: block;
   text-align: center;
 }
+
 #prev-post a:hover {
   color: #ff1e00;
 }
+
 #prev-post a:hover .arrow {
   background-color: #3d302f;
 }
+
 #prev-post nav {
   padding-bottom: 15px;
   border-bottom: 1px solid #f0eceb;
   margin: 15px 0;
 }
+
 #prev-post .arrow {
   display: block;
   width: 45px;
   height: 45px;
   border-radius: 22.5px;
-  background: #5d504f url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI0Ny4zMDEiPjxwb2x5Z29uIGZpbGw9IiNmZmYiIHBvaW50cz0iMjMuNjUsNDcuMzAxIDAsMjMuNjUxIDIzLjY1LDAgMzAsNi4zNSAxMi42OTksMjMuNjUxIDMwLDQwLjk1MSIvPjwvc3ZnPg==') no-repeat 47% 50%;
+  background: #5d504f inline-image("arrow-left.svg") no-repeat 47% 50%;
   background-size: 33%;
 }
 
 /* TODO: Remove heirarchy & general cleanup */
+
 .single {
   position: relative;
 }
+
 .single .post-title {
   color: #3d302f;
 }
+
 .single #excerpt {
   padding-bottom: 30px;
   color: #5d504f;
 }
+
 .single #excerpt p {
   padding-top: 0;
   font: italic 28px/1.55 Georgia, serif;
 }
+
 .single .pagination {
   margin-top: 30px;
 }
+
 .single #content-main {
   margin: 30px 0;
   border-bottom: 2px solid #f0eceb;
   padding-bottom: 15px;
 }
+
 .single .post-content {
   margin-bottom: 45px;
 }
-.single .post-content h1, .single .post-content h2 {
+
+.single .post-content h1,
+.single .post-content h2 {
   margin: 15px 0;
   padding: 0;
 }
+
 .single .post-content h1 {
   font-size: 20px;
   margin-top: 30px;
 }
+
 .single .post-content h2 {
   font-size: 17px;
   font-weight: 700;
 }
+
 .single .post-content dd {
   margin-left: 40px;
 }
+
 .single .post-content .flush-left {
   margin-left: -26.1%;
 }
-.single .post-content img.flush-left, .single .post-content video.flush-left {
+
+.single .post-content img.flush-left,
+.single .post-content video.flush-left {
   max-width: 126.1%;
 }
-.single .post-content .alignright, .single .post-content .alignleft {
+
+.single .post-content .alignright,
+.single .post-content .alignleft {
   max-width: 40%;
 }
+
 .single .post-content .alignright {
   margin-left: 20px;
 }
+
 .single .post-content .alignleft {
   margin-right: 20px;
 }
@@ -1675,28 +2138,35 @@ button, .button, input[type=submit] {
   margin: 0 0 30px 0;
   /* TODO: Try this pattern out :not(:last-child) */
 }
+
 #post-footer .widget:nth-child(4n) {
   margin-right: 40px;
 }
+
 #post-footer .widget:nth-child(4n+1) {
   clear: none;
 }
+
 #post-footer .widget:nth-child(3n) {
   margin-right: 0;
 }
+
 #post-footer .widget:nth-child(3n+1) {
   clear: left;
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
   .post-info .previous a:before {
     content: "Previous Post: ";
   }
+
   .post-info .previous nav {
     display: none !important;
   }
 }
+
 #content.page.fullspread #content-primary {
   float: none;
   width: 100%;
@@ -1713,18 +2183,22 @@ button, .button, input[type=submit] {
 .error404 h2 {
   margin-top: 0;
 }
+
 .error404 .main {
   margin-bottom: 30px;
 }
 
 /* TODO: Use class selectors */
+
 #sidebar {
   width: 21.679%;
   margin-top: 10px;
 }
+
 #sidebar .widget {
   margin-right: 0;
 }
+
 #sidebar .widget-title:first-child {
   margin-top: 0 !important;
 }
@@ -1732,17 +2206,20 @@ button, .button, input[type=submit] {
 #comments-container {
   margin-top: 60px;
 }
+
 #comments-container .pagination {
   margin-bottom: 30px;
 }
 
-.no_comments, .comments_closed {
+.no_comments,
+.comments_closed {
   margin: 30px 0;
   font: italic 28px/1.25 Georgia, serif;
   color: #5d504f;
 }
 
-#comment-form-logged-in-as, #comment-form-info {
+#comment-form-logged-in-as,
+#comment-form-info {
   width: 21.679%;
 }
 
@@ -1754,7 +2231,9 @@ button, .button, input[type=submit] {
   width: 73.9%;
   font-family: Georgia, serif;
 }
-.comment-content blockquote, .comment-content blockquote p {
+
+.comment-content blockquote,
+.comment-content blockquote p {
   font-size: 13px;
 }
 
@@ -1775,63 +2254,80 @@ button, .button, input[type=submit] {
   padding-left: 0;
   margin-left: 0;
 }
+
 #comments .date-time {
   display: block;
   margin-top: 3px;
 }
+
 #comments .comment:not(:first-child) {
   margin: 60px 0;
 }
+
 #comments .comment:last-child {
   margin-bottom: 0;
 }
+
 #comments .comment.bypostauthor {
   margin: 45px 0;
 }
+
 #comments .comment-edit-link {
   font-weight: 700;
   color: #ea0000;
 }
+
 #comments .children {
   list-style: none;
   margin-left: 40px;
   margin-top: 0;
 }
+
 #comments .children .comment {
   margin: 30px 0;
 }
 
 /*TODO reference IDs instead of tags*/
+
 #respond {
   margin-top: 60px;
 }
+
 #respond label {
   display: none;
 }
-#respond input[type=text], #respond textarea {
+
+#respond input[type=text],
+#respond textarea {
   width: 100%;
 }
+
 #respond input[type=text] {
   margin-bottom: 15px;
   text-align: right;
 }
+
 #respond textarea {
   margin: 0;
   height: 118px;
 }
+
 #respond textarea:focus {
   height: 375px;
 }
+
 #respond #submit {
   margin-top: 15px;
   /*TODO: Extend .push-three?*/
   margin-left: 26.1%;
 }
+
 #respond .loggedin {
   font-style: italic;
 }
 
 /*MOBILE*/
+
 @media only screen and (max-width: 767px) {
   #respond #comment-form-info input[type=text] {
     text-align: left;
@@ -1840,6 +2336,7 @@ button, .button, input[type=submit] {
   #respond {
     margin-bottom: 30px;
   }
+
   #respond #submit {
     margin-left: 0;
     display: block;
@@ -1849,14 +2346,17 @@ button, .button, input[type=submit] {
   #comments .metadata {
     margin-top: 5px;
   }
+
   #comments .date-time {
     display: inline;
     margin-top: 0px;
   }
+
   #comments .children {
     margin-left: 0;
   }
 }
+
 #page-bottom {
   background: #5d504f;
   color: #f0eceb;
@@ -1866,9 +2366,12 @@ button, .button, input[type=submit] {
   padding: 30px 0;
   margin-top: 30px;
 }
+
 #page-footer h3 {
   color: #fffefe;
 }
+
 #page-footer a {
   color: #fffefe;
 }
+

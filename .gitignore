@@ -1,8 +1,9 @@
 .DS_Store
-.scssc
-.sass-cache
-node_modules
-vendor
-dist
+/node_modules
+/vendor
+.idea
+.vscode
+npm-debug.log
+yarn-error.log
 composer.phar
 composer.lock
