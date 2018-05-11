@@ -163,7 +163,7 @@ label.feature-title {
 }
 
 span.frank-handle {
-	background: url(/wp-content/themes/frank/admin/images/handle.png) center center no-repeat;
+	background: url('/wp-content/themes/frank/images/admin/handle.png') center center no-repeat;
 	cursor: move;
 	display: block;
 	height: 20px;
@@ -303,7 +303,7 @@ label.inline {
 
 .categories-container .categorychecklist li {
 	display: block;
-	
+
 	margin: 5px 0;
 	padding: 0;
 	width: auto;

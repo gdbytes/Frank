@@ -1,5 +1,15 @@
 <?php
 
+function frank_theme_options() {
+    frank_build_settings_page();
+}
+
+// add our menus
+function frank_admin_menu() {
+	add_theme_page( 'Frank', __( 'Frank Theme Options', 'frank_theme' ), 'manage_options', 'frank-settings', 'frank_theme_options' );
+}
+add_action( 'admin_menu', 'frank_admin_menu' );
+
 // CREATE THE SETTINGS TABS IN WP ADMIN
 if (!function_exists('frank_admin_tabs')) {
 function frank_admin_tabs($current = 'general') {
@@ -63,7 +73,7 @@ if(!function_exists('frank_update_settings_button')) {
 	function frank_update_settings_button($updated) {
 		if ($updated) {
 			echo '<h4 class="saved-success">';
-				echo '<img src="'.get_template_directory_uri().'/admin/images/success.png" />';
+				echo '<img src="'.get_template_directory_uri().'/images/admin/success.png" />';
 				_e('Frank\'s Settings Have Been Updated.', 'frank_theme');
 			echo '</h4>';
 
@@ -84,7 +94,7 @@ function frank_build_settings_page() {
 
 	// SET FILE DIRECTORY
 	$file_dir = get_template_directory_uri();
-	
+
 	// SETUP NEEDED STYLES & SCRIPTS FOR OPTIONS PAGE
 	//wp_enqueue_script('jquery-ui-sortable' );
 	//wp_enqueue_script('frank-admin', $file_dir . '/admin/js/frank-utils.js', 'jquery', NULL, TRUE);
@@ -111,8 +121,8 @@ function frank_build_settings_page() {
 		<form method="post" action="">
 
 			<div id="settings-container"> <?php
-			
-			
+
+
 			if ($pagenow == 'themes.php' && $_GET['page'] == 'frank-settings') {
 
 				if (isset($_GET['tab'])) { $tab = $_GET['tab']; } else { $tab = 'general'; }
@@ -120,7 +130,7 @@ function frank_build_settings_page() {
 				switch ($tab) {
 
 					// SETUP OPTIONS FOR GENERAL TAB
-					case 'general' : 
+					case 'general' :
 						require_once 'frank-theme-options-general.php';
 						break;
 
@@ -128,7 +138,7 @@ function frank_build_settings_page() {
 						require_once 'frank-theme-options-home.php';
 						break; // END CASE "HOME"
 
-					case 'performance' : 
+					case 'performance' :
 						require_once 'frank-theme-options-performance.php';
 						break;
 
@@ -147,7 +157,7 @@ function frank_build_settings_page() {
 			</div><!-- // SETTINGS CONTAINER -->
 
 		</form><!-- // END FORM -->
-		
+
 		<?php
 			global $frank_warnings;
 			if (defined('WP_DEBUG')  && (WP_DEBUG == true)) {
