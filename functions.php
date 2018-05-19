@@ -156,7 +156,11 @@ function frank_enqueue_assets() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+    }
+
+    if ( frank_get_option( 'enable_wp_embed') != true) {
+        wp_deregister_script( 'wp-embed' );
+    }
 }
 
 function frank_enqueue_admin_assets() {
@@ -197,6 +201,7 @@ function frank_get_option( $key ) {
             'header' => '',
             'footer' => '',
             'tweet_post_button' => false,
+            'enable_wp_embed' => false,
             'tweet_post_attribution' => '',
             'sections' => array(
             'display_type' => 'default_loop',

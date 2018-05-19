@@ -1,4 +1,5 @@
     </div>
+
     <?php if ( is_active_sidebar( 'widget-footer' ) ) : ?>
         <div id="page-bottom">
             <footer id="page-footer" class="container" role="contentinfo">
