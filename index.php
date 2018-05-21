@@ -46,12 +46,15 @@
 					get_template_part( 'partials/loops/loop', 'fourup' );
 					break;
 				default :
-					get_template_part( 'partials/loops/loop' );
+					get_template_part( 'template-parts/content' );
 			}
 		}
 	} else {
-		//Insert default loop
-		get_template_part( 'partials/loops/loop' );
+
+        if ( have_posts() ) : while ( have_posts() ) : the_post();
+          get_template_part( 'template-parts/content' );
+        endwhile;
+        endif;
 	}
 	?>
 	<?php get_template_part( 'partials/post-pagination' ); ?>

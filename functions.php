@@ -192,6 +192,11 @@ if ( frank_get_option( 'remove_style_version' ) ){
 	add_filter( 'style_loader_src', 'frank_remove_version_from_query_string', 15, 1 );
 }
 
+/**
+ * Include template functions.
+ */
+require_once get_template_directory() . '/includes/template-tags.php';
+
 function frank_get_option( $key ) {
 
     $frank_options = get_option( '_frank_options' );

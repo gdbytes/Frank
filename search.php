@@ -1,44 +1,50 @@
-<?php
-/**
- * @package Frank
- */
-?>
 <?php get_header(); ?>
-<div id="content" class="archive">
-	<div class="row">
-		<main id="content-primary" role="main">
-			<?php if ( have_posts() ) : ?>
-			<header>
-				<h1 class="page-title">
-				<?php
-					_e( 'Search Results for', 'frank_theme' );
-					echo ' ';
-					echo '&#8216';  // left single quotation mark
-					echo the_search_query();
-					echo '&#8217';  // right single quotation mark
-				?>
-				</h1>
-			</header>
-			<div class="posts">
-				<?php while ( have_posts() ): ?>
-					<?php the_post(); ?>
-					<?php get_template_part( 'partials/posts/post' ); ?>
-				<?php endwhile; ?>
-				<?php get_template_part( 'partials/post-pagination' ); ?>
-				<?php else : ?>
-				<div class="post">
-					<h2>
-						<?php _e( 'No Results Were Found', 'frank_theme' ); ?>
-					</h2>
-					<p>
-						<?php _e( 'There were no matches for your search. Please try a different search term.', 'frank_theme' ); ?>
-					</p>
-				</div>
-			</div>
-			<?php endif; ?>
+
+<div class="wrap">
+
+	<header class="page-header">
+		<?php if ( have_posts() ) : ?>
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'frank_theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<?php else : ?>
+			<h1 class="page-title"><?php _e( 'Nothing Found', 'frank_theme' ); ?></h1>
+		<?php endif; ?>
+	</header>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php
+		if ( have_posts() ) :
+
+			while ( have_posts() ) :
+				the_post();
+
+				get_template_part( 'template-parts/content', 'excerpt' );
+
+			endwhile;
+
+			the_posts_pagination(
+				array(
+					'prev_text'          => '<span class="screen-reader-text">' . __( 'Previous page', 'frank_theme' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'frank_theme' ) . '</span>',
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'frank_theme' ) . ' </span>',
+				)
+			);
+
+		else :
+		?>
+
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'frank_theme' ); ?></p>
+			<?php
+				get_search_form();
+
+		endif;
+		?>
+
 		</main>
-		<?php get_template_part( 'partials/sidebars/sidebar', 'archive' ); ?>
 	</div>
+	<?php get_sidebar(); ?>
 </div>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

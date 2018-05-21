@@ -1,9 +1,4 @@
-<?php
-/**
- * @package Frank
- */
-?>
-<aside id="sidebar" role="complementary">
+<aside id="secondary" class="widget-area" role="complementary">
 	<?php if ( !dynamic_sidebar( 'Post Right Aside' ) ) : ?>
 		<h3>
 			<?php _e( 'About This Site', 'frank_theme' ); ?>

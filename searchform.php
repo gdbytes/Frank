@@ -1,10 +1,9 @@
-<?php
-/**
- * @package Frank
- */
-?>
+<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
-<?php $search_placeholder = __( 'Type your query, hit enter', 'frank_theme' ); ?>
-<form method="get" id="searchform" action="<?php echo home_url(); ?>/" role="search">
-	<input type="text" placeholder=<?php echo '"' . $search_placeholder . '" '; ?> class='textinput' name="s" id="s" />
+<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<label for="<?php echo $unique_id; ?>">
+		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'frank_theme' ); ?></span>
+	</label>
+	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'frank_theme' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	<button type="submit" class="search-submit"><?php echo _x( 'Search', 'submit button', 'frank_theme' ); ?></button>
 </form>
