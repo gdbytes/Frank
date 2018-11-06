@@ -75,6 +75,19 @@ function frank_theme_content_width() {
 add_action( 'after_setup_theme', 'frank_theme_content_width', 0 );
 
 function frank_theme_widgets_init() {
+
+    register_sidebar(
+        array(
+			'name'          => 'Primary Sidebar',
+			'id'      		=> 'primary-sidebar',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+        )
+    );
+
+    /** keep these for legacy/? */
 	register_sidebar(
 		array(
 			'name'          => 'Sub Header',
@@ -307,3 +320,11 @@ function frank_theme_header_style() {
     endif;
     echo '</style>';
 }
+
+/**
+ * Add read more link to excerpt.
+ */
+function frank_excerpt( $more ) {
+	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'frank_theme') . '</a>';
+}
+add_filter( 'excerpt_more', 'frank_excerpt' );

@@ -1,0 +1,57 @@
+@mixin container {
+    margin: 0 auto;
+    padding: 0 ($gutter-width / 2);
+    max-width: $max-width;
+    @include clearfix();
+}
+
+@mixin row($gutter: $gutter-width) {
+    display: block;
+    margin: 0 (-($gutter / 2));
+    @include clearfix();
+}
+
+@mixin column($width: 100%, $gutter: $gutter-width) {
+    @if ($width == 100%) {
+        float: none;
+    } @else {
+        float: left;
+    }
+    display: block;
+    width: $width;
+    padding: 0 ($gutter / 2);
+}
+
+@mixin xlarge {
+    @media screen and (min-width: $xlarge) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin phablet {
+    @media screen and (min-width: $phablet) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+    @-ms-viewport { width: device-width; }
+}
+
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none; // Remove the border on images inside links in IE 10-.
+
+    &.img-responsive {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+hr {
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+
+    &.with-bigger-margin {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

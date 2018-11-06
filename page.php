@@ -1,23 +1,19 @@
 <?php get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <main id="content" class="site-content" role="main">
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content', 'page' );
+        <?php
+        while ( have_posts() ) :
+            the_post();
+            get_template_part( 'template-parts/content', 'page' );
 
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			endwhile;
-			?>
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+        endwhile;
+        ?>
 
-		</main>
-	</div>
-</div>
+    </main>
 
 <?php
 get_footer();

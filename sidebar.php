@@ -1,12 +1,8 @@
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php if ( !dynamic_sidebar( 'Post Right Aside' ) ) : ?>
-		<h3>
-			<?php _e( 'About This Site', 'frank_theme' ); ?>
-		</h3>
-		<p><?php bloginfo( 'description' ); ?></p>
-		<h3>
-			<?php _e( 'Search', 'frank_theme' ); ?>
-		</h3>
-		<?php get_search_form(); ?>
-	<?php endif; ?>
+<?php
+if ( ! is_active_sidebar( 'primary-sidebar' ) ) {
+	return;
+}
+?>
+<aside id="secondary" class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Blog Sidebar', 'frank_theme' ); ?>">
+	<?php dynamic_sidebar( 'primary-sidebar' ); ?>
 </aside>
